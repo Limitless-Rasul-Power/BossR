@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FE87AE9-D859-47E3-98F6-B1755007D045}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Boss_RЯ</RootNamespace>
+    <AssemblyName>Boss RЯ</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract Classes\AdditionalRequirement.cs" />
+    <Compile Include="Abstract Classes\Person.cs" />
+    <Compile Include="Abstract Classes\UniqueID.cs" />
+    <Compile Include="Abstract Classes\User.cs" />
+    <Compile Include="Entity Classes\Announcement.cs" />
+    <Compile Include="Entity Classes\CV.cs" />
+    <Compile Include="Entity Classes\Database.cs" />
+    <Compile Include="Entity Classes\Employer.cs" />
+    <Compile Include="Entity Classes\Notification.cs" />
+    <Compile Include="Entity Classes\Worker.cs" />
+    <Compile Include="Helper Static Classes\CVHelper.cs" />
+    <Compile Include="Helper Static Classes\JsonFileHelper.cs" />
+    <Compile Include="Helper Static Classes\MailHelper.cs" />
+    <Compile Include="Helper Static Classes\StreamFileWriteHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static Classes about Common Menu Choices\BossFirstMenuChoices.cs" />
+    <Compile Include="Static Classes about Common Menu Choices\UserHeadMenuChoices.cs" />
+    <Compile Include="Static Classes about Employer Menu Choices\EmployerAboutAnnouncementSideMenuChoices.cs" />
+    <Compile Include="Static Classes about Employer Menu Choices\EmployerAboutAnnouncementSideUpdateChoiceMenuChoices.cs" />
+    <Compile Include="Static Classes about Employer Menu Choices\EmployerAboutWorkerSideMenuChoices.cs" />
+    <Compile Include="Static Classes about Employer Menu Choices\EmployerSecondMenuChocies.cs" />
+    <Compile Include="Static Classes about Worker Menu Choices\WorkerAnnouncementSideFilterChoiceMenuChoices.cs" />
+    <Compile Include="Static Classes about Worker Menu Choices\WorkerAnnouncementSideMenuChoices.cs" />
+    <Compile Include="Static Classes about Worker Menu Choices\WorkerCVSideMenuChoices.cs" />
+    <Compile Include="Static Classes about Worker Menu Choices\WorkerCVSideUpdateChoiceMenuChoices.cs" />
+    <Compile Include="Static Classes about Worker Menu Choices\WorkerSecondMenuChoices.cs" />
+    <Compile Include="Static Classes\Configuration.cs" />
+    <Compile Include="Static Classes\ConsoleConfiguration.cs" />
+    <Compile Include="Static Classes\EmployerMenus.cs" />
+    <Compile Include="Static Classes\Verify.cs" />
+    <Compile Include="Static Classes\WorkerMenus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
